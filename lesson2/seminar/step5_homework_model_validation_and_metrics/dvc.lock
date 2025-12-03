@@ -9,8 +9,8 @@ stages:
       size: 127
     - path: src/get_data.py
       hash: md5
-      md5: 7714975fc80e7613f73461ddf3026d26
-      size: 586
+      md5: 484cf63bdaf6f1165977443a982c7db1
+      size: 587
     outs:
     - path: data/raw/tips.csv
       hash: md5
@@ -25,12 +25,12 @@ stages:
       size: 7943
     - path: src/validate_data.py
       hash: md5
-      md5: 4407f1a46c46e78d120418fd81d817db
-      size: 4561
+      md5: 0f35d39e64abb80f9ef7fc00088095be
+      size: 4562
     outs:
     - path: reports/validation
       hash: md5
-      md5: f3fd05054e27937503b23f045d7995c4.dir
+      md5: f4aa1044d3809474bab00a76e92d49d0.dir
       size: 2271
       nfiles: 1
   preprocess:
@@ -42,8 +42,8 @@ stages:
       size: 7943
     - path: src/preprocess.py
       hash: md5
-      md5: 03d81771a2d12a69c9a94beebc115c38
-      size: 390
+      md5: af3fcf13cdaed340612b7b5ecff91267
+      size: 391
     outs:
     - path: data/processed/dataset.csv
       hash: md5
@@ -62,12 +62,12 @@ stages:
       size: 127
     - path: src/train.py
       hash: md5
-      md5: 4c5e622a1bf6f87c0a6508a13e34ba7f
-      size: 809
+      md5: adde7e403e6adaae84f92c8d489b0fcd
+      size: 810
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: e69ec76e9059eb90148d0b1211804833
+      md5: 87aeca7c52eed226f360c3719a0bce72
       size: 824
   evaluate:
     cmd: python src/evaluate.py
@@ -78,7 +78,7 @@ stages:
       size: 3365
     - path: models/model.pkl
       hash: md5
-      md5: e69ec76e9059eb90148d0b1211804833
+      md5: 87aeca7c52eed226f360c3719a0bce72
       size: 824
     - path: params.yaml
       hash: md5
@@ -86,8 +86,8 @@ stages:
       size: 127
     - path: src/evaluate.py
       hash: md5
-      md5: f119880587a5096d0256dccd25059b18
-      size: 1090
+      md5: ec07f30a642f96b0b889055f05bb1f4b
+      size: 1065
     outs:
     - path: metrics/metrics.json
       hash: md5
@@ -98,7 +98,7 @@ stages:
     deps:
     - path: models/model.pkl
       hash: md5
-      md5: e69ec76e9059eb90148d0b1211804833
+      md5: 87aeca7c52eed226f360c3719a0bce72
       size: 824
     - path: params.yaml
       hash: md5
@@ -106,5 +106,5 @@ stages:
       size: 127
     - path: src/validate_model.py
       hash: md5
-      md5: b62cf03b01716db539a8a6e824f69d94
-      size: 926
+      md5: 77da758570e7af688d39ec77fef6d969
+      size: 949
