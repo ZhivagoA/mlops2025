@@ -1,1 +1,3 @@
-seminar/step5_homework_model_validation_and_metrics/
+# Allow .dvc for step5 project
+!seminar/step5_homework_model_validation_and_metrics/.dvc
+!seminar/step5_homework_model_validation_and_metrics/.dvc/**/*
